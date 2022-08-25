@@ -1,0 +1,5 @@
+.DS_store
+*.exe
+*a.out
+*.o
+
