@@ -6,11 +6,21 @@
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 16:47:42 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/08/26 20:38:42 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/08/27 16:30:36 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <ctype.h>
+
+static int	ft_isspace(char c)
+{
+	if (c == '\t' || c == '\n' || c == '\v' || c == '\f')
+		return (1);
+	else if (c == '\r' || c == ' ')
+		return (1);
+	return (0);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -21,18 +31,18 @@ int	ft_atoi(const char *str)
 	result = 0;
 	sign = 0;
 	ngt = 1;
-	while (*str && *str <= ' ' && *str != '\e')
-		str++;
-	while (*str && (*str == '-' || *str == '+') && *str != '\e')
+	while (ft_isspace(*str))
+		str ++;
+	while (*str && (*str == '-' || *str == '+'))
 	{
 		if (*str == '-')
 			ngt = -1;
 		sign += 1;
-		str++;
+		str ++;
 	}
 	if (sign > 1)
 		return (0);
-	while (*str >= '0' && *str <= '9' && *str != '\e')
+	while (*str >= '0' && *str <= '9')
 		result = (result * 10) + (*str++ - '0');
 	return (ngt * result);
 }
@@ -57,6 +67,7 @@ int	main()
 	printf("ft_atoi : %d\n",ft_atoi("\nabc"));
 	printf("atoi : %d\n",atoi("\t121asd4sd"));
 	printf("ft_atoi : %d\n",ft_atoi("\t121iasd4sd"));
-	printf("atoi : %d\n",atoi("-11"));
-	printf("ft_atoi : %d\n",ft_atoi("-11"));
+	printf("atoi : %d\n",atoi("\e-11"));
+	printf("ft_atoi : %d\n",ft_atoi("\e-11"))
+
 }*/
