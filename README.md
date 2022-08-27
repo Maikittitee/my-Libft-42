@@ -14,11 +14,11 @@ Be careful
 
 you can use this command (if you copy my ' .zprofile ' into your ' ~ ')
 
-- 'grademe' command to run war-machine-tester 
+- ' grademe ' command to run war-machine-tester 
 
-- 'rma' to remove a.out 
+- ' rma ' to remove a.out 
 
-- 'gc' to compile with ' gcc -Wall -Werror -Wextra ' and also run ' ./a.out '
+- ' gc ' to compile with ' gcc -Wall -Werror -Wextra ' and also run ' ./a.out '
  
-- 'gitup </file> <commit>' to git add && git commit -m && gitup
+- ' gitup "file" "commit" ' to git add && git commit -m && gitup
 
