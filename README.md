@@ -15,7 +15,10 @@ Be careful
 you can use this command (if you copy my '.zprofile' into your '~')
 
 -'grademe' command to run war-machine-tester 
+
 -'rma' to remove a.out 
+
 -'gc' to compile with gcc -Wall -Werror -Wextra
+
 -'gitup </file> <commit>' to git add && git commit -m && gitup
 
