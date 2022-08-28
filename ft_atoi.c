@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
 
 static int	ft_isspace(char c)
 {
@@ -49,10 +48,10 @@ int	ft_atoi(const char *str)
 /*
 int	main()
 {
-	printf("atoi : %d\n",atoi("-+--42"));
-	printf("ft_atoi : %d\n",ft_atoi("-+--42"));
-	printf("atoi : %d\n",atoi("-+55"));
-	printf("ft_atoi : %d\n",ft_atoi("-+55"));
+	printf("atoi : %d\n",atoi("2147483647"));
+	printf("ft_atoi : %d\n",ft_atoi("2147483647"));
+	printf("atoi : %d\n",atoi("-2147483648"));
+	printf("ft_atoi : %d\n",ft_atoi("-2147483648"));
 	printf("atoi : %d\n",atoi("++--66"));
 	printf("ft_atoi : %d\n",ft_atoi("++--66"));
 	printf("atoi : %d\n",atoi("--1"));
@@ -68,6 +67,6 @@ int	main()
 	printf("atoi : %d\n",atoi("\t121asd4sd"));
 	printf("ft_atoi : %d\n",ft_atoi("\t121iasd4sd"));
 	printf("atoi : %d\n",atoi("\e-11"));
-	printf("ft_atoi : %d\n",ft_atoi("\e-11"))
+	printf("ft_atoi : %d\n",ft_atoi("\e-11"));
 
 }*/
