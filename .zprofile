@@ -13,9 +13,10 @@ alias gitup='(){
 	(echo "\n++++++++++++++++++++++++++++++++++++++\ngit commit -m "$2 by alias"\n--------------------------------------"; git commit -m "$2 by alias") && \
 	(echo "\n++++++++++++++++++++++++++++++++++++++\ngit push\n--------------------------------------"; git push);}'
 
+#Run libft-war-machine Tester
 alias grademe='(){ bash libft-war-machine/grademe.sh $1 $2 $3 $4;}'
 
-alias grade='(){ echo "bash libft-war-machine/grademe.sh $1\n" ;bash libft-war-machine/grademe.sh $1 $2 $3 $4 $5;}'
+#alias grade='(){ echo "bash libft-war-machine/grademe.sh $1\n" ;bash libft-war-machine/grademe.sh $1 $2 $3 $4 $5;}'
 
 
 
