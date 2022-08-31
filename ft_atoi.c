@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 16:47:42 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/08/31 17:22:41 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/08/31 20:39:39 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_atoi(const char *str)
 		result = (result * 10) + (*str++ - '0');
 	return (ngt * result);
 }
-
+/*
 int	main()
 {
 	printf("atoi : %d\n",atoi("-9223372036854775809"));
@@ -70,3 +70,4 @@ int	main()
 	printf("ft_atoi : %d\n",ft_atoi("\e-11"));
 
 }
+*/
