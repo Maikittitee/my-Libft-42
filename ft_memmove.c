@@ -1,32 +1,52 @@
 #include "libft.h"
-
+#include <string.h>
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	char *dest;
-	char *source;
+	int	i;
+	int	sign;
 
-	dest = (char *)dst;
-	source = (char *)src;
+	sign = 1;
 	i = 0;
-
-	while (i < len && source[i])
+	/*if (!dst && !src)
+		return(0);*/
+	if (dst > src)
 	{
-		dest[i] = source[i];
-		i++;
+		sign = -1;
+		i = (int)len - 1;
 	}
-	//dest[i] = '\0';
-	return (dest);
+	while (len > 0)
+	{
+		((char *)dst)[i] = ((char *)src)[i];
+		len --;
+		i += (sign * 1);
+	}
+	return (dst);
 }
 /*
 int	main()
 {
-	char	src[10] = "Hello";
-	char	dst[10];
-	char	src2[10] = "Hello";
-	char	dst2[10];
-	ft_memmove(dst,src,8);
-	printf("my = %s\n",dst);
-	memmove(dst,src,8);
-	printf("Real = %s\n",dst);
-}*/
+	int	src[10] = {1, 2 ,3 ,4};
+	int	dst[10];
+	int	src2[10] = {1, 2 ,3 ,4};
+	int	dst2[10];
+	//ft_memcpy(src + 2,src,5);
+	ft_memmove(dst,src,sizeof(int) * 4);
+	int	j = 0;
+	while (j < 10)
+	{
+		printf("ft_memmove[%d] = %d\n",j,dst[j]);
+		j++;
+	}
+
+	//printf("ft_memmove = %d %d %d %d\n",dst[0],dst[1],dst[2],dst[3]);
+	//memmove(src2 + 2,src2,5);
+	memmove(dst2,src2,sizeof(int) * 4);
+
+	int i = 0;
+	while (i < 10)
+	{
+		printf("memmove[%d] = %d\n",i,dst2[i]);
+		i++;
+	}
+}
+*/
