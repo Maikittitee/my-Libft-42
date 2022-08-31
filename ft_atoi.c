@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 16:47:42 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/08/27 16:30:36 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/08/31 17:22:41 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,13 @@ int	ft_atoi(const char *str)
 		result = (result * 10) + (*str++ - '0');
 	return (ngt * result);
 }
-/*
+
 int	main()
 {
-	printf("atoi : %d\n",atoi("2147483647"));
-	printf("ft_atoi : %d\n",ft_atoi("2147483647"));
-	printf("atoi : %d\n",atoi("-2147483648"));
-	printf("ft_atoi : %d\n",ft_atoi("-2147483648"));
+	printf("atoi : %d\n",atoi("-9223372036854775809"));
+	printf("ft_atoi : %d\n",ft_atoi("-9223372036854775809"));
+	printf("atoi : %d\n",atoi("2147483649"));
+	printf("ft_atoi : %d\n",ft_atoi("2147483649"));
 	printf("atoi : %d\n",atoi("++--66"));
 	printf("ft_atoi : %d\n",ft_atoi("++--66"));
 	printf("atoi : %d\n",atoi("--1"));
@@ -69,4 +69,4 @@ int	main()
 	printf("atoi : %d\n",atoi("\e-11"));
 	printf("ft_atoi : %d\n",ft_atoi("\e-11"));
 
-}*/
+}
