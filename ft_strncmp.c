@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n)
+	while (i < n && (s1[i] || s2[i]))
 	{
 		if (s1[i] != s2[i])
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
@@ -28,6 +28,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 /*
 int	main()
 {
-	printf("%d\n",strncmp("test\200","test\0",6));
-	printf("%d\n",ft_strncmp("test\200","test\0",6));
-}*/
+	printf("%d\n",strncmp("test\0\0\0\0","test\0abc",8));
+	printf("%d\n",ft_strncmp("test\0\0\0\0","test\0abc",8));
+	printf("%d\n",strncmp("","test\0abc",8));
+	printf("%d\n",ft_strncmp("","test\0abc",8));
+	printf("%d\n",strncmp("test\0\0\0\0","",8));
+	printf("%d\n",ft_strncmp("test\0\0\0\0","",8));
+}
+*/
