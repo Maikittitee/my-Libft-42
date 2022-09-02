@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:50:27 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/08/31 20:55:06 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/02 15:31:50 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strrchr(const char *s, int c)
 	char	*str;
 
 	str = (char *)s;
-	if (!str)
-		return (NULL);
 	len = strlen(str);
 	while (str[len] != c && len > 0)
 		len --;
