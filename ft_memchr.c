@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 17:27:19 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/03 15:48:38 by ktunchar         ###   ########.fr       */
+/*   Created: 2022/09/03 16:26:24 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/09/03 17:26:22 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void    *ft_memchr(const void *s, int c, size_t n)
 {
-	char	*buffer;
-	int		i;
+    size_t i;
+	char	*str;
 
-	i = 0;
-	buffer = malloc(sizeof(char) * strlen(s1) + 1);
-	if (!buffer)
-		return (NULL);
-	while (s1[i])
-	{
-		buffer[i] = s1[i];
+    i = 0;
+	str = (char *)s;
+    while (str[i] && str[i] != c && i < n)
 		i++;
-	}
-	buffer[i] = '\0';
-	return (buffer);
+	if (str[i] && str[i] == c)
+		return (str + i);
+	else
+		return (NULL);
+}
+
+int	main(void)
+{
+	char *s = "hello\0rgr";
+	char *s2 = "hello\0rgr";
+
+	printf("memchr = %s\n",memchr(s, '\0', 9));
+	printf("ft_memchr = %s\n",ft_memchr(s2, '\0', 9));
 }

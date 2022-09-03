@@ -6,20 +6,19 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 13:11:00 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/02 13:17:06 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/03 15:47:00 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    void	*buffer;
- 
+	void	*buffer;
+
 	buffer = malloc(count * size);
 	if (!buffer)
-		return(NULL);
-	
+		return (NULL);
 	ft_bzero(buffer, count * size);
 	return (buffer);
 }
