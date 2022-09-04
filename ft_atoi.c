@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 16:47:42 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/08/31 20:39:39 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/04 22:48:52 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,27 +21,27 @@ static int	ft_isspace(char c)
 	return (0);
 }
 
+static int	ft_issign(char c)
+{
+	return (c == '-' || c == '+');
+}
+
 int	ft_atoi(const char *str)
 {
 	int	result;
-	int	sign;
 	int	ngt;
 
 	result = 0;
-	sign = 0;
 	ngt = 1;
 	while (ft_isspace(*str))
 		str ++;
-	while (*str && (*str == '-' || *str == '+'))
+	if (*str && ft_issign(*str))
 	{
 		if (*str == '-')
 			ngt = -1;
-		sign += 1;
-		str ++;
+		str++;
 	}
-	if (sign > 1)
-		return (0);
-	while (*str >= '0' && *str <= '9')
+	while (ft_isdigit(*str))
 		result = (result * 10) + (*str++ - '0');
 	return (ngt * result);
 }
