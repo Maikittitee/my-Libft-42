@@ -35,7 +35,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	}	
 	return (len);
 }
-
+/*
 int main()
 {
     char	dst[14] = "SAWAT";
@@ -50,3 +50,4 @@ int main()
 	printf("ft_strcat = %s\n",dst1);
 
 }
+*/
