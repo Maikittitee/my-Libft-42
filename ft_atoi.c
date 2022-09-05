@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 16:47:42 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/04 22:48:52 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/05 20:12:25 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,33 +25,55 @@ static int	ft_issign(char c)
 {
 	return (c == '-' || c == '+');
 }
+/*
+static int	ismaxlong(char *str)
+{
+	if (ft_strlen(str) > 19)
+		return (1);
+	else if (ft_strncmp(str,"9223372036854775807",19) >= 1)
+		return (1);
+	else
+		return (0);
+	}
 
+static int	isminlong(char *str)
+{
+	return (0);
+}
+*/
 int	ft_atoi(const char *str)
 {
-	int	result;
-	int	ngt;
+	unsigned long	result;
+	unsigned long	ngt;
+	int	i;
 
+	i = 0;
 	result = 0;
 	ngt = 1;
-	while (ft_isspace(*str))
-		str ++;
-	if (*str && ft_issign(*str))
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] && ft_issign(str[i]))
 	{
-		if (*str == '-')
+		if (str[i] == '-')
 			ngt = -1;
-		str++;
+		i++;
 	}
-	while (ft_isdigit(*str))
-		result = (result * 10) + (*str++ - '0');
+	//if (ismaxlong((char *)(&(str[i]))) && ft_isdigit(str[i]))
+	//	return (-1);
+	while (ft_isdigit(str[i]))
+	{
+		result = (result * 10) + (str[i] - '0');
+		i++;
+	}
 	return (ngt * result);
 }
 /*
 int	main()
 {
+	printf("atoi : %d\n",atoi("9223372036854775808"));
+	printf("ft_atoi : %d\n",ft_atoi("9223372036854775808"));
 	printf("atoi : %d\n",atoi("-9223372036854775809"));
 	printf("ft_atoi : %d\n",ft_atoi("-9223372036854775809"));
-	printf("atoi : %d\n",atoi("2147483649"));
-	printf("ft_atoi : %d\n",ft_atoi("2147483649"));
 	printf("atoi : %d\n",atoi("++--66"));
 	printf("ft_atoi : %d\n",ft_atoi("++--66"));
 	printf("atoi : %d\n",atoi("--1"));
@@ -64,10 +86,9 @@ int	main()
 	printf("ft_atoi : %d\n",ft_atoi("+12"));
 	printf("atoi : %d\n",atoi("\nabc"));
 	printf("ft_atoi : %d\n",ft_atoi("\nabc"));
-	printf("atoi : %d\n",atoi("\t121asd4sd"));
-	printf("ft_atoi : %d\n",ft_atoi("\t121iasd4sd"));
-	printf("atoi : %d\n",atoi("\e-11"));
-	printf("ft_atoi : %d\n",ft_atoi("\e-11"));
-
+	printf("atoi : %d\n",atoi("121asd4sd"));
+	printf("ft_atoi : %d\n",ft_atoi("121iasd4sd"));
+	printf("atoi : %d\n",atoi("-11"));
+	printf("ft_atoi : %d\n",ft_atoi("-11"));
 }
 */
