@@ -44,7 +44,7 @@ static int	isminlong(char *str)
 int	ft_atoi(const char *str)
 {
 	unsigned long	result;
-	unsigned long	ngt;
+	int	ngt;
 	int	i;
 
 	i = 0;
@@ -58,13 +58,16 @@ int	ft_atoi(const char *str)
 			ngt = -1;
 		i++;
 	}
-	//if (ismaxlong((char *)(&(str[i]))) && ft_isdigit(str[i]))
-	//	return (-1);
 	while (ft_isdigit(str[i]))
 	{
 		result = (result * 10) + (str[i] - '0');
 		i++;
 	}
+	if (ngt == -1 && result > 9223372036854775808ull)
+		result = 0;
+	else if (ngt == 1 && result > 9223372036854775807ull)
+		result = -1;
+
 	return (ngt * result);
 }
 /*
