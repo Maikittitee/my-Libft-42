@@ -25,22 +25,7 @@ static int	ft_issign(char c)
 {
 	return (c == '-' || c == '+');
 }
-/*
-static int	ismaxlong(char *str)
-{
-	if (ft_strlen(str) > 19)
-		return (1);
-	else if (ft_strncmp(str,"9223372036854775807",19) >= 1)
-		return (1);
-	else
-		return (0);
-	}
 
-static int	isminlong(char *str)
-{
-	return (0);
-}
-*/
 int	ft_atoi(const char *str)
 {
 	unsigned long	result;
@@ -70,7 +55,7 @@ int	ft_atoi(const char *str)
 
 	return (ngt * result);
 }
-/*
+
 int	main()
 {
 	printf("atoi : %d\n",atoi("9223372036854775808"));
@@ -94,4 +79,4 @@ int	main()
 	printf("atoi : %d\n",atoi("-11"));
 	printf("ft_atoi : %d\n",ft_atoi("-11"));
 }
-*/
+
