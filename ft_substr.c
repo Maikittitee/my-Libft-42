@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 12:16:51 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/07 12:41:06 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/07 13:38:47 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,40 +17,30 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*buffer;
 	char	*str;
 	size_t	i;
-	size_t	j;
 
+	if (!s)
+		return (NULL);
 	i = 0;
-	j = 0;
 	str = (char *)s;
 	buffer = malloc(sizeof(char) * len + 1);
 	if (!buffer)
-		return(NULL);
-	while (str[i] != (int)start)
+		return (NULL);
+	if (start >= ft_strlen(str))
+		return (buffer);
+	while (i < len)
 	{
-		if (!str[i])
-		{
-			return (NULL);
-		}
+		buffer[i] = str[start];
 		i++;
+		start++;
 	}
-	while (j < len)
-	{
-		if (str[i])
-			buffer[j] = str[i];
-		else
-			buffer[j] = '\0';
-		j++;
-		i++;
-	}
-	buffer[j] = '\0';
+	buffer[i] = '\0';
 	return (buffer);
 }
 /*
 int	main()
 {
-	char	str[10] = "1234";
-	//char	dst[6];
+	char	str[] = "lorem ipsum dolor sit amet";
 
-	printf("%s\n",ft_substr(str,0,1));
+	printf("%s\n",ft_substr(str,400,20));
 }
 */

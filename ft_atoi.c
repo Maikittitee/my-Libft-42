@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 16:47:42 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/06 17:01:14 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/07 13:23:48 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ static int	ft_issign(char c)
 int	ft_atoi(const char *str)
 {
 	unsigned long	result;
-	int	ngt;
-	int	i;
+	int				ngt;
+	int				i;
 
 	i = 0;
 	result = 0;
@@ -52,10 +52,9 @@ int	ft_atoi(const char *str)
 		result = 0;
 	else if (ngt == 1 && result > 9223372036854775807ull)
 		result = -1;
-
 	return (ngt * result);
 }
-
+/*
 int	main()
 {
 	printf("atoi : %d\n",atoi("9223372036854775808"));
@@ -79,4 +78,4 @@ int	main()
 	printf("atoi : %d\n",atoi("-11"));
 	printf("ft_atoi : %d\n",ft_atoi("-11"));
 }
-
+*/
