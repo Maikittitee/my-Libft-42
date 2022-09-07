@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 14:07:41 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/07 16:01:38 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/07 19:47:19 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	ft_intlen(long n)
 {
 	long	i;
 
-	i  = 0;
+	i = 0;
 	if (n == 0)
 		return (1);
 	if (n < 0)
@@ -36,33 +36,32 @@ char	*ft_itoa(int n)
 {
 	char	*buffer;
 	int		len;
-	unsigned long	nb;
 
 	len = ft_intlen(n);
-	buffer = malloc(sizeof(char) * len + 1);
+	buffer = ft_calloc(len + 1, sizeof(char));
 	if (!buffer)
 		return (NULL);
 	if (n == 0)
-		ft_memcpy(buffer,"0\0",2);
+		ft_memcpy(buffer, "0\0", 2);
+	if (n == -2147483648)
+	{
+		ft_memcpy(buffer, "-2147483648\0", 12);
+		n = 0;
+	}
 	if (n < 0)
 	{
 		buffer[0] = '-';
 		n *= -1;
 	}
-	nb = (unsigned long)n;
-	buffer[len] = '\0';
-	len--;
-	while (nb > 0)
+	while (n > 0)
 	{
-		buffer[len] = (nb % 10) + '0';
-		len --;
-		nb /= 10;
+		buffer[--len] = (n % 10) + '0';
+		n /= 10;
 	}
 	return (buffer);
 }
 
-
-
+/*
 int	main(void)
 {
 	
@@ -82,3 +81,4 @@ int	main(void)
 	
 }
 
+*/
