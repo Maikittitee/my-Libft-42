@@ -74,20 +74,20 @@ char	**ft_split(char const *s, char c)
 	while (str[i])
 	{
 		if (str[i] != c && (str[i - 1] == c || !str[i - 1]))
-			buffer[j] = append_word(&str[i], c);
+			buffer[j++] = append_word(&str[i], c);
 		i++;
-		j++;
 	}
+	buffer[j] = NULL;
 	return (buffer);
 }
 
-
+/*
 int	main(int ac, char **av)
 {
 	int	i;
 	char **dst;
 
-	dst = ft_split(" i wanna hear you ay something",' ');
+	dst = ft_split(" i wanna hear you say something",' ');
 	i = 0;
 	while (i < 6)
 	{
@@ -96,3 +96,4 @@ int	main(int ac, char **av)
 	}
 	//printf("len of word = %d\n", append_word(av[1], ' '));
 }
+*/
