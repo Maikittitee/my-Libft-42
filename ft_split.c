@@ -62,6 +62,8 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	char	*str;
 
+	if (!s)
+		return (NULL);
 	str = (char *)s;
 	buffer = malloc(sizeof(char *) * (count_word(str, c) + 1));
 	//Protect MALLOC
