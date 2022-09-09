@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 16:18:48 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/09 16:56:11 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/09 23:33:49 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static int	word_len(char *s, char c)
 {
 	int	i;
 	int	len;
+
 	len = 0;
 	i = 0;
 	while (s[i] == c)
@@ -43,12 +44,10 @@ static char	*append_word(char *s, char c)
 	i = 0;
 	while (s[i] == c)
 		i++;
-	while (s[i])
+	while (s[i] != c)
 	{
 		if (s[i] != c)
 			buffer[j++] = s[i];
-		else
-			break;
 		i++;
 	}
 	buffer[j] = '\0';
@@ -102,9 +101,9 @@ int	main(int ac, char **av)
 	int	i;
 	char **dst;
 
-	dst = ft_split("i wanna hear you say something",' ');
+	dst = ft_split("    i    wanna h      ear     you say something  ",' ');
 	i = 0;
-	while (i < 6)
+	while (i < 7)
 	{
 		printf("index %d is %s\n",i,dst[i]);
 		i++;
