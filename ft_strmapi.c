@@ -6,12 +6,11 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 23:36:12 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/10 17:08:51 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/11 22:05:17 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -28,14 +27,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (str[i])
 	{
-		buffer[i] = f(i,str[i]);
+		buffer[i] = f(i, str[i]);
 		i++;
 	}
 	buffer[i] = '\0';
 	return (buffer);
-		
-
 }
+
 /*
 char func (unsigned int i, char *str) {
 	return (*(str - 'a'));
