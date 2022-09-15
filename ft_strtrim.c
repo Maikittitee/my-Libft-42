@@ -6,13 +6,13 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 17:47:52 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/13 20:00:49 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/15 16:04:07 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		how_much_i_need_to_allocate(char *str, char *set)
+int		allocate_len(char *str, char *set)
 {
 	int	i;
 	int	j;
@@ -44,30 +44,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	str = (char *)s1;
 	find = (char *)set;
-	buffer = malloc(sizeof(char) * (how_much_i_need_to_allocate(str, find) + 1));
+	buffer = malloc(sizeof(char) * (allocate_len(str, find) + 1));
 	if (!buffer)
 		return (NULL);
 	i = 0;
-	k - 0;
-	while (str[i])
-	{
-		j == 0;
-		if (str[i] == find[j])
-			i++;
-		if (str[i] != find[j])
-			j++;
-		
-
-				j++;
-			else if (!find[j])
-				buffer[k] = str[i];
-			else //str[i] == find[j]
-				break
-			j++;
-		}
-		i++;
-	}
-}
+	k = 0;
+	
 
 
 int	main(void)
