@@ -6,7 +6,7 @@
 #    By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 17:25:19 by ktunchar          #+#    #+#              #
-#    Updated: 2022/09/18 18:44:05 by ktunchar         ###   ########.fr        #
+#    Updated: 2022/09/18 19:57:47 by ktunchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ ft_putendl_fd.c ft_split.c ft_strmapi.c ft_striteri.c ft_strtrim.c
 
 OBJS := $(SRCS:.c=.o)
 
-BONUS	= ft_lstnew.c ft_lstadd_front.c
+BONUS	= ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c
 
 BONUS_OBJS = $(BONUS:%.c=%.o)
 
