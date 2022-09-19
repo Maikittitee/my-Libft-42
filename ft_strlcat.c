@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 19:51:15 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/04 20:13:25 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/19 20:35:52 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,15 @@ int main()
     char	dst[23] = "Hello";
     char	dst1[23] = "Hello";
 	
-	memset(dst,'r',15);
-	memset(dst1,'r',15);
+	//memset(dst,'r',15);
+	//memset(dst1,'r',15);
 
 	printf("dst = %s\n",dst);
 	printf("dst1 = %s\n",dst1);
 	printf("--------------------------------------\n");
-	printf("Return Value = %zu\n",strlcat(dst,"lorem ip",2));	
+	printf("Return Value = %zu\n",strlcat(dst,"WOLD",7));	
 	printf("strcat = %s\n",dst);
-	printf("ft Return Value = %zu\n",ft_strlcat(dst1,"lorem ip",2));	
+	printf("ft Return Value = %zu\n",ft_strlcat(dst1,"WOLD",7));	
 	printf("ft_strcat = %s\n",dst1);
 }
 */
