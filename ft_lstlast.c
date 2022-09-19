@@ -6,7 +6,7 @@
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 20:28:47 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/19 20:54:40 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/19 21:43:12 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *curr;
+	t_list	*curr;
 
 	curr = lst;
 	if (!lst)

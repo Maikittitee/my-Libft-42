@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:49:41 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/18 20:01:48 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/19 21:38:54 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *head;
-	
+	t_list	*head;
+
 	if (*lst)
 	{
 		head = *lst;

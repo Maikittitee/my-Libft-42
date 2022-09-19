@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:37:20 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/18 19:36:54 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/19 21:41:01 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	(*new).next = *lst; // same as (*new).next , new->next
-	*lst = new; //change head
+	(*new).next = *lst;
+	*lst = new;
 }
+/*line 17---> same as (*new).next , new->next*/

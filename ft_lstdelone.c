@@ -6,7 +6,7 @@
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 21:05:28 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/19 21:24:44 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/19 21:42:47 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst || !del)
 		return ;
-	
-	if (lst->content)
-		(*del)(lst->content);
+	if (lst -> content)
+		(*del)(lst -> content);
 	free(lst);
-	
 }
