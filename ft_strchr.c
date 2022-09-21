@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:29:57 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/08/29 13:33:43 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/21 23:54:57 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,14 @@ char	*ft_strchr(const char *s, int c)
 
 	i = 0;
 	str = (char *)s;
-	while (str[i] != c && str[i])
+	while (str[i] != (char)c && str[i])
 		i++;
-	if (str[i] == c)
+	if (str[i] == (char)c)
 		return (str + i);
+	if (c == '\0')
+		return (str);
 	else
-		return (0);
+		return (NULL);
 }
 /*
 int main()

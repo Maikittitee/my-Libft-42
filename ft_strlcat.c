@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 19:51:15 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/19 20:35:52 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 00:36:05 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 			i++;
 			dstlen++;
 		}
-		while (dstlen < dstsize)
-			dst[dstlen++] = '\0';
+		if (dstlen < dstsize)
+			dst[dstlen] = '\0';
 	}
 	if (ft_strlen(dst) < dstsize)
 		return (ft_strlen(src) + initdstlen);

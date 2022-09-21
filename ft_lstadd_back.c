@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:49:41 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/19 21:38:54 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 00:47:31 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*head;
+	t_list	*p;
 
-	if (*lst)
+	if (!(*lst))
 	{
-		head = *lst;
-		while ((*lst)->next != NULL)
-			*lst = (*lst)->next;
-		(*lst)->next = new;
-		new->next = NULL;
-		*lst = head;
-	}
-	else
 		*lst = new;
+		return ;
+	} 
+	p = *lst;
+	while (p->next)
+		p = p->next;
+	p->next = new;
+	//new->next = NULL;
+	//*lst = head;
+	
 }
