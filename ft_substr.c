@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 12:16:51 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/21 16:09:17 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/21 19:05:55 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	str = (char *)s;
 	if (start >= ft_strlen(str))
-		return ((char *) calloc(1, sizeof(char)));
+		return ((char *) ft_calloc(1, sizeof(char)));
 	buffer = malloc(sizeof(char) * len + 1);
 	if (!buffer)
 		return (NULL);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 17:12:18 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/20 20:30:21 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/21 20:00:31 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while((*lst))
 	{
 		temp = (*lst)->next;
+
 		ft_lstdelone( *lst, del);
 		*lst = temp;
 	}
