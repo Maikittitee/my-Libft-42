@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:36:22 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/08/31 21:24:20 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:19:13 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main()
-{
-	printf("%d\n",strncmp("test\0\0\0\0","test\0abc",8));
-	printf("%d\n",ft_strncmp("test\0\0\0\0","test\0abc",8));
-	printf("%d\n",strncmp("","test\0abc",8));
-	printf("%d\n",ft_strncmp("","test\0abc",8));
-	printf("%d\n",strncmp("test\0\0\0\0","",8));
-	printf("%d\n",ft_strncmp("test\0\0\0\0","",8));
-}
-*/

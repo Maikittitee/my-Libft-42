@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:29:57 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/21 23:54:57 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:07:18 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,3 @@ char	*ft_strchr(const char *s, int c)
 	else
 		return (NULL);
 }
-/*
-int main()
-{
-    char t[20] = "hello";
-
-	printf("strchr : %s\n",strchr(t,'a'));
-	printf("ft_strchr : %s\n",ft_strchr(t,'a'));
-	
-}*/

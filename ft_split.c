@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 16:18:48 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/21 20:54:44 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:57:17 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ static size_t	word_len(char *s, char c)
 static char	*append_word(char *s, char c)
 {
 	char	*buffer;
-	size_t		i;
-	size_t		j;
-	size_t		len;
+	size_t	i;
+	size_t	j;
+	size_t	len;
 
 	len = word_len(s, c);
 	buffer = malloc(sizeof(char) * (len + 1));
@@ -63,7 +63,7 @@ static size_t	count_word(char const *s, char c)
 			i++;
 		if (s[i])
 			count++;
-		while (s[i] && s[i] != c) 
+		while (s[i] && s[i] != c)
 			i++;
 	}	
 	return (count);
@@ -72,14 +72,14 @@ static size_t	count_word(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**buffer;
-	size_t		i;
-	size_t		j;
 	char	*str;
+	size_t	i;
+	size_t	j;
 
 	if (!s)
 		return (NULL);
 	str = (char *)s;
-	buffer = malloc(sizeof(char *) * (count_word(str,c) + 1));
+	buffer = malloc(sizeof(char *) * (count_word(str, c) + 1));
 	if (!buffer)
 		return (NULL);
 	i = 0;
@@ -90,19 +90,20 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (str[i])
 			buffer[j++] = append_word(&str[i], c);
-		while (str[i] && str[i] != c) 
+		while (str[i] && str[i] != c)
 			i++;
 	}
 	buffer[j] = NULL;
 	return (buffer);
 }
+
 /*
 int	main()
 {
 	int	i;
 	char **dst;
 
-	dst = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+	dst = ft_split("lorem ipsum dolor sit amet", ' ');
 	
 	//printf("%d\n",word_len("   hello",' '));
 	

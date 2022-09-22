@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 16:47:42 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/07 20:32:47 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:20:51 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,28 +54,3 @@ int	ft_atoi(const char *str)
 		result = -1;
 	return (ngt * result);
 }
-/*
-int	main()
-{
-	printf("atoi : %d\n",atoi("9223372036854775808"));
-	printf("ft_atoi : %d\n",ft_atoi("9223372036854775808"));
-	printf("atoi : %d\n",atoi("-9223372036854775809"));
-	printf("ft_atoi : %d\n",ft_atoi("-9223372036854775809"));
-	printf("atoi : %d\n",atoi("++--66"));
-	printf("ft_atoi : %d\n",ft_atoi("++--66"));
-	printf("atoi : %d\n",atoi("--1"));
-	printf("ft_atoi : %d\n",ft_atoi("--1"));
-	printf("atoi : %d\n",atoi("123"));
-	printf("ft_atoi : %d\n",ft_atoi("123"));
-	printf("atoi : %d\n",atoi("+++1"));
-	printf("ft_atoi : %d\n",ft_atoi("+++1"));
-	printf("atoi : %d\n",atoi("+12"));
-	printf("ft_atoi : %d\n",ft_atoi("+12"));
-	printf("atoi : %d\n",atoi("\nabc"));
-	printf("ft_atoi : %d\n",ft_atoi("\nabc"));
-	printf("atoi : %d\n",atoi("121asd4sd"));
-	printf("ft_atoi : %d\n",ft_atoi("121iasd4sd"));
-	printf("atoi : %d\n",atoi("-11"));
-	printf("ft_atoi : %d\n",ft_atoi("-11"));
-}
-*/

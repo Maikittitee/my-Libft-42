@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 13:34:05 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/08/29 13:34:25 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:20:02 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main()
-{
-	printf("memcmp = %d\n",memcmp("Hello","hello",6));
-	printf("ft_memcmp = %d\n",ft_memcmp("Hello","hello",6));
-}
-*/

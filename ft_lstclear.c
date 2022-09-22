@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 17:12:18 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/21 20:00:31 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:35:24 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *temp;
+	t_list	*temp;
 
-	while((*lst))
+	while (*lst)
 	{
 		temp = (*lst)->next;
-
-		ft_lstdelone( *lst, del);
+		ft_lstdelone(*lst, del);
 		*lst = temp;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 17:47:52 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/21 19:08:56 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:55:29 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*buffer;
 	char	*str;
-	char	*find;
-	int	front;
-	int back;
-	int	i;
+	int		front;
+	int		back;
+	int		i;
 
 	if (!s1)
 		return (NULL);
 	str = (char *)s1;
-	find = (char *)set;
 	front = 0;
 	back = ft_strlen(str) - 1;
-	while (ft_isinset(str[front],find))
+	while (ft_isinset(str[front], (char *)set))
 		front++;
-	while (ft_isinset(str[back],find) && back > front)
+	while (ft_isinset(str[back], (char *)set) && back > front)
 		back--;
 	buffer = malloc((back - front + 2) * sizeof(char));
 	if (!buffer)

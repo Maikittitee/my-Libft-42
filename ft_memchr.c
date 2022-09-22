@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 16:26:24 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/22 00:31:40 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:19:31 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*str;
 
 	i = 0;
@@ -27,13 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	char *s = "hello\0rgr";
-	char *s2 = "hello\0rgr";
-
-	printf("memchr = %s\n",memchr(s, '\0', 9));
-	printf("ft_memchr = %s\n",ft_memchr(s2, '\0', 9));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:49:41 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/22 00:47:31 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:33:58 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	{
 		*lst = new;
 		return ;
-	} 
+	}
 	p = *lst;
 	while (p->next)
 		p = p->next;
 	p->next = new;
-	//new->next = NULL;
-	//*lst = head;
-	
 }

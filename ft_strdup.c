@@ -6,7 +6,7 @@
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 17:27:19 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/09/03 15:48:38 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:21:20 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	int		i;
 
 	i = 0;
-	buffer = malloc(sizeof(char) * strlen(s1) + 1);
+	buffer = malloc(sizeof(char) * ft_strlen(s1) + 1);
 	if (!buffer)
 		return (NULL);
 	while (s1[i])
