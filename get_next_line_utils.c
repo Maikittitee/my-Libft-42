@@ -34,9 +34,7 @@ char	*ft_strjoin_free(char *s1, char *s2)
 	char		*buffer;
 	int			i;
 	int			j;
-	static int	count;
 
-	count++;
 	if (!s2)
 		return (NULL);
 	buffer = malloc((ft_strlen_mode(s1, 0) + ft_strlen_mode(s2, 0) + 1) * sizeof(char));
